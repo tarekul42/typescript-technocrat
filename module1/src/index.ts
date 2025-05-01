@@ -1,3 +1,5 @@
-let country: string = "I live in Bangladehsh";
+{
+  let country: string = "I live in Bangladehsh";
 
-console.log(country)
+  console.log(country);
+}
