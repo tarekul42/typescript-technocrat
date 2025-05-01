@@ -26,4 +26,15 @@
     ...mentors1,
     ...mentors2,
   };
+
+  //   learning rest operator
+
+  const greetFriends = (...friends: string[]) => {
+    // return `Hi ${friend1}, ${friend2}, ${friend3}`;
+    friends.forEach((friend: string) => {
+      return console.log(`Hi ${friend}`);
+    });
+  };
+
+  greetFriends("abul", "babul", "mokbul");
 }
