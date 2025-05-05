@@ -6,11 +6,11 @@
 
     Instructions:
 
-    Define a function that takes:
-    name (string)
-    age (number)
-    role (optional, with type 'admin' | 'user' | 'guest')
-    The function should log these values or perform a basic action.
+        Define a function that takes:
+        name (string)
+        age (number)
+        role (optional, with type 'admin' | 'user' | 'guest')
+        The function should log these values or perform a basic action.
  */
   function myFunction(
     name: string,

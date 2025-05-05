@@ -5,9 +5,9 @@
 
        Instructions:
 
-        Create a TypeScript program.
-        Print the following message to the console:
-        Hello World, I will complete this course successfully and become a Next level Web Developer!
+          Create a TypeScript program.
+          Print the following message to the console:
+          Hello World, I will complete this course successfully and become a Next level Web Developer!
      */
   //
 
