@@ -20,10 +20,10 @@
   function filterByRating(
     items: { title: string; rating: number }[]
   ): { title: string; rating: number }[] {
-    const mappedItems = items.filter(
+    const filteredItems = items.filter(
       (item: { title: string; rating: number }) => item.rating >= 4
     );
-    return mappedItems;
+    return filteredItems;
   }
 
   filterByRating(books);
@@ -54,15 +54,55 @@
 
   //   task 5
   function processValue(value: string | number): number {
-    if(typeof value === "string"){
-        return value.length;
+    if (typeof value === "string") {
+      return value.length;
     } else {
-        return value*2;
+      return value * 2;
     }
   }
 
-  console.log(processValue("bangladesh"))
-  console.log(processValue(10))
+  processValue("hello");
+  processValue(10);
+
+  //   task 6
+  interface Product {
+    name: string;
+    price: number;
+  }
+
+  const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 },
+    { name: "Mouse", price: 850 },
+  ];
+
+  function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (!products || products.length === 0) {
+      return null;
+    } else {
+      const mostExpensive = products.reduce((max, current) =>
+        max.price > current.price ? max : current
+      );
+      return mostExpensive;
+    }
+  }
+  getMostExpensiveProduct(products);
+
+  //   task 7
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday,
+  }
+
+  function getDayType(day: Day): string {
+    return "bangladesh";
+  }
 
   //
 }
