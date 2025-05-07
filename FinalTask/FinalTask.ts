@@ -28,9 +28,16 @@
 
   filterByRating(books);
 
-  //   task 3
+  function concatenateArrays<T>(...arrays: T[][]): T[] {
+    const result = arrays.reduce((acc, arr) => {
+      return [...acc, ...arr];
+    }, [] as T[]);
 
-  // task 4
+    return result;
+  }
+
+  concatenateArrays(["a", "b"], ["c"]);
+  concatenateArrays([1, 2], [3, 4], [5]);
 
   class Vehicle {
     constructor(private make: string, private year: number) {}
@@ -52,7 +59,6 @@
   myCar.getInfo();
   myCar.getModel();
 
-  //   task 5
   function processValue(value: string | number): number {
     if (typeof value === "string") {
       return value.length;
@@ -64,7 +70,6 @@
   processValue("hello");
   processValue(10);
 
-  //   task 6
   interface Product {
     name: string;
     price: number;
@@ -89,7 +94,6 @@
   }
   getMostExpensiveProduct(products);
 
-  //   task 7
   enum Day {
     Monday,
     Tuesday,
@@ -119,7 +123,6 @@
   getDayType(Day.Monday);
   getDayType(Day.Sunday);
 
-  // task 8
   async function squareAsync(n: number): Promise<number> {
     if (n < 0) {
       throw "Error: Negative number not allowed";
