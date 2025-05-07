@@ -101,8 +101,37 @@
   }
 
   function getDayType(day: Day): string {
-    return "bangladesh";
+    switch (day) {
+      case Day.Monday:
+      case Day.Tuesday:
+      case Day.Wednesday:
+      case Day.Thursday:
+      case Day.Friday:
+        return "Weekday";
+      case Day.Saturday:
+      case Day.Sunday:
+        return "Weekend";
+      default:
+        return `Unknown day value: ${day}. We will add this day on the Calendar soon.`;
+    }
   }
+
+  getDayType(Day.Monday);
+  getDayType(Day.Sunday);
+
+  // task 8
+  async function squareAsync(n: number): Promise<number> {
+    if (n < 0) {
+      throw "Error: Negative number not allowed";
+    }
+    const result = await new Promise<number>((resolve) => {
+      setTimeout(() => resolve(n * n), 1000);
+    });
+    return result;
+  }
+
+  squareAsync(15).then(console.log);
+  squareAsync(-1).catch(console.error);
 
   //
 }
